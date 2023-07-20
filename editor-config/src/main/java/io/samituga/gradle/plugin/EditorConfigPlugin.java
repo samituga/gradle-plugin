@@ -16,7 +16,6 @@ public class EditorConfigPlugin implements Plugin<Project> {
     public void apply(@NotNull Project project) {
         var config = new CopyResourceConfig(SOURCE_FILE_PATH, project.getProjectDir(), FILE_NAME);
 
-
         var task = project.getTasks().create(TASK_NAME, CopyResourceTask.class, (copyResourceTask) -> {
             copyResourceTask.setConfig(config);
             copyResourceTask.setGroup("EditorConfig");
