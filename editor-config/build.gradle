@@ -1,0 +1,18 @@
+plugins {
+    id 'maven-publish'
+}
+
+dependencies {
+    api project(":common-tasks")
+}
+
+// TODO publish to remote
+
+gradlePlugin {
+    plugins {
+        EditorConfigPlugin {
+            id = 'io.samituga.gradle.plugin.editor-config'
+            implementationClass = 'io.samituga.gradle.plugin.EditorConfigPlugin'
+        }
+    }
+}
